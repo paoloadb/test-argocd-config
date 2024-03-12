@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: argocd-test-app
+  namespace: default
+spec:
+  selector:
+    app: argocd-test-app
+  type: ClusterIP
+  sessionAffinity: None
+  sessionAffinityConfig:
+    clientIP:
+      timeoutSeconds: 10800
+  ports:
+  - name: argocd-test-app
+    protocol: TCP
+    port:  6789
+    targetPort: 6789 
+    # If you set the `spec.type` field to `NodePort` and you want a specific port number,
+    # you can specify a value in the `spec.ports[*].nodePort` field.
+    # nodePort: 
