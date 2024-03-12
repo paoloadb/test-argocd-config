@@ -9,7 +9,7 @@ spec:
   selector:
     matchLabels:
       app: argocd-test-app
-  replicas: 1
+  replicas: 2
   strategy:
     rollingUpdate:
       maxSurge: 25%
