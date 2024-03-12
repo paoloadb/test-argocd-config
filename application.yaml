@@ -1,0 +1,21 @@
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: test-argocd-application
+  namespace: default
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/paoloadb/test-argocd-repo
+    targetRevision: HEAD
+    path: 
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: argocd-test-app
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+    - CreateNamespace=true
