@@ -6,7 +6,7 @@ metadata:
 spec:
   selector:
     app: argocd-test-app
-  type: NodePort
+  type: LoadBalancer
   sessionAffinity: None
   sessionAffinityConfig:
     clientIP:
