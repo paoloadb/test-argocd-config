@@ -26,7 +26,7 @@ spec:
           # - Each init container must complete successfully before the next one starts.
       containers:
       - name:  argocd-test-app
-        image:  paoloadb/test-argocd-app:2.2
+        image:  paoloadb/test-argocd-app:2.2.2
         resources:
           requests:
             cpu: 100m
