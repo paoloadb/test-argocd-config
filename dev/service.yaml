@@ -15,7 +15,7 @@ spec:
   - name: argocd-test-app
     protocol: TCP
     port:  6789
-    targetPort: 80 
+    targetPort: 6789 
     # If you set the `spec.type` field to `NodePort` and you want a specific port number,
     # you can specify a value in the `spec.ports[*].nodePort` field.
     # nodePort: 
