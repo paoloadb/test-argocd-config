@@ -29,8 +29,8 @@ spec:
         image:  paoloadb/test-argocd-app:1.1
         resources:
           requests:
-            cpu: 1G
-            memory: 1Gi
+            cpu: 500M
+            memory: 500Mi
           limits:
             cpu: 1.5G
             memory: 1.5Gi
