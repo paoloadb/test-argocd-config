@@ -26,14 +26,14 @@ spec:
           # - Each init container must complete successfully before the next one starts.
       containers:
       - name:  argocd-test-app
-        image:  paoloadb/test-argocd-app:2.2
+        image:  paoloadb/test-argocd-app:2.0
         resources:
           requests:
-            cpu: 100m
-            memory: 100Mi
+            cpu: 1G
+            memory: 1Gi
           limits:
-            cpu: 750m
-            memory: 750Mi
+            cpu: 1.5G
+            memory: 1.5Gi
         # livenessProbe:
         #   tcpSocket:
         #     port: 80
